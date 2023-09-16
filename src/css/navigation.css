@@ -1,0 +1,52 @@
+.hoverable:hover .thin-line {
+  width: 100%;
+  transition: 1.5s ease;
+}
+
+.hoverable:not(:hover) .thin-line {
+  width: 15px;
+  transition: 1.5s ease;
+}
+
+@media (max-width: 768px) {
+    #navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom, #F8B500, #FFF4E0);
+    }
+
+    #logo, #links {
+        margin: 1rem auto;
+    }
+
+    #logo {
+      width: 100%;
+      margin: 8px 0;
+    }
+
+    #logo a img {
+      margin-left: 1rem;
+      width: 50px;
+    }
+
+    .thin-line {
+        display: none;
+    }
+
+    #nav-button {
+      margin-right: 1rem;
+      display: inline-block;
+      width: 20px;
+    }
+
+    #nav-button svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    .nav-list-text {
+      font-size: 1rem;
+    }
+}

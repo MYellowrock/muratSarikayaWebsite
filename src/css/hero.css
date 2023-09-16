@@ -1,0 +1,111 @@
+/* hero.css */
+#hero {
+  position: relative;
+}
+
+#hero::before {
+  content: "";
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 244, 224, 1),
+      transparent
+    ),
+    url("../images/heroBackground.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 82%;
+  z-index: -1;
+}
+
+.image-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+.image-3d-container {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  margin: 0;
+  text-align: center;
+  width: 400px;
+}
+
+.image-3d-container:hover .image {
+  transition: all 1.5s ease;
+  transform: scale(1.2, 1.2) rotateY(25deg);
+}
+
+.image-3d-container:not(:hover) .image {
+  transition: all 1.5s ease;
+  transform: scale(1, 1) rotateY(0deg); /* Resmi eski boyutuna getir ve y ekseni etrafında sıfır derece döndür */
+}
+
+#hero-image {
+  margin: 0 auto;
+  display: inline-block;
+  width: 400px;
+}
+
+.text-background {
+    color: transparent;
+    background-image: url("../images/whiteGif.gif"); /* Gif dosyanızın URL'sini ekleyin */
+    background-clip: text;
+    -webkit-background-clip: text; /* Safari ve Chrome için gerekli */
+    mask-image: url("../images/whiteGif.gif"); /* Gif dosyanızın URL'sini ekleyin */
+    mask-size: cover;
+    display: inline-block; /* Inline olmayan bir elementin içine yerleştirin */
+  }
+
+@media (min-width: 768px) {
+  #hero-infos {
+    padding-left: 2rem;
+    border-left: 6px solid brown;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-image {
+    width: 250px;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 6px;
+  }
+
+  #hero-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+  }
+
+  #hero-name {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+  }
+
+  .description-web{
+    color: white;
+  }
+
+}

@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+    #footer-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .footer-icons, .footer-links {
+        color: white;
+    }
+}
