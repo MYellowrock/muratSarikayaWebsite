@@ -2,7 +2,9 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { BsPhoneVibrate } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
+import { AiOutlineFilePdf } from "react-icons/ai";
 import "../css/footer.css";
+import resumeEnglish from "../englishCv.pdf"
 
 function Footer() {
   return (
@@ -54,6 +56,19 @@ function Footer() {
             className="footer-links text-center text-sm text-white hover:text-cv-red transition duration-300"
           >
             MYellowrock
+          </a>
+        </div>
+        <div
+          id="contact-github"
+          className="info-div flex flex-row justify-center items-center gap-[2px] my-[12px]"
+        >
+          <AiOutlineFilePdf className="footer-icons text-3xl text-center p-[4px] text-white inline-block" />
+          <a
+            href={resumeEnglish}
+            download="murat_Sarikaya_Resume"
+            className="footer-links text-center text-sm text-white hover:text-cv-red transition duration-300"
+          >
+            My Resume
           </a>
         </div>
       </div>
